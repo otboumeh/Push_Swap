@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:29:48 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/28 15:22:17 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/07/30 13:41:43 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char *str, char separator)
 				return (NULL);
 			vector_strings[i++][0] = '\0';
 		}
-		vector_strings[i++] = get_next_word(str, separator);
+		vector_strings[i++] = search_next_word(str, separator);
 	}
 	vector_strings[i] = NULL;
 	return (vector_strings);

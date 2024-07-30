@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:27:02 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/28 13:46:23 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/07/30 10:11:34 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		ft_split(argv[1], ' ');
-	
+	stack_init(&a, argv + 1, argc == 2);
 		
 	
 	
