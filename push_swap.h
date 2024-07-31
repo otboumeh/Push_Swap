@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:27:18 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/30 13:40:31 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/07/31 12:30:12 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void	free_matrix(char **argv);
 // utils.c
 t_stack_node	*find_last_node(t_stack_node *top);
 void	append_node(t_stack_node **stack, int nbr);
+int	stack_len(t_stack_node *stack);
 
 #endif

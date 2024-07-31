@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:22:55 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/30 13:26:27 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/07/31 12:27:28 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,19 @@ void	append_node(t_stack_node **stack, int nbr)
 		last_node->next_node = node;
 		node->prev_node = last_node;
 	}
+}
+
+int	stack_len(t_stack_node *stack)
+{
+	int	count;
+
+	if (NULL == stack)
+		return (0);
+	count = 0;
+	while (stack)
+	{
+		++count;
+		stack = stack->next_node;
+	}
+	return (count);
 }
