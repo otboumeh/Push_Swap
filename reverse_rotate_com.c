@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_com.c                                         :+:      :+:    :+:   */
+/*   reverse_rotate_com.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 13:01:54 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/31 15:54:09 by otboumeh         ###   ########.fr       */
+/*   Created: 2024/07/31 15:56:30 by otboumeh          #+#    #+#             */
+/*   Updated: 2024/07/31 15:57:08 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_stack_node **dest, t_stack_node **src)
+static void	reverse_rotate(t_stack_node **stack)
 {
-	t_stack_node *node_to_push;	
+	t_stack_node	*last;
+	int				len;
 
-	if (*src == NULL)
+	len = stack_len(*stack);
+	if (NULL == *stack || NULL == stack || 1 == len)
 		return ;
-	node_to_push = *src;
-	*src = (*src)->next_node;
-	if (*src)
-		(*src)->prev_node = NULL;
-	node_to_push->prev_node = NULL;
-	if (*dest == NULL)
-	{
-		*dest = node_to_push;
-		node_to_push->next_node = NULL;
-	}
-	else
-	{
-		node_to_push->next_node = *dest;
-		node_to_push->next_node->prev_node = node_to_push;
-		*dest = node_to_push;
-	}
+	last = find_last_node(*stack);
+	last->prev_node->next_node = NULL;
+	last->next_node = *stack;
+	last->prev_node = NULL;
+	*stack = last;
+	last->next_node->prev_node = last;
 }
