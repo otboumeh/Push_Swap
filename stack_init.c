@@ -6,13 +6,13 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 10:10:55 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/30 13:29:42 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 09:44:07 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static long ft_atol(const char *str)
+static	long	ft_atol(const char *str)
 {
 	long	num;
 	int		isneg;
@@ -43,7 +43,7 @@ static long ft_atol(const char *str)
 void	stack_init(t_stack_node **a, char **argv, bool check)
 {
 	long	nbr;
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (argv[i])
@@ -57,7 +57,7 @@ void	stack_init(t_stack_node **a, char **argv, bool check)
 			error_free(a, argv, check);
 		append_node(a, (int)nbr);
 		i++;
-	}	
+	}
 	if (check)
 		free_matrix(argv);
 }

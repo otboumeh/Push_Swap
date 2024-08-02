@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 13:22:55 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/31 12:27:28 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 09:45:14 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack_node	*find_last_node(t_stack_node *top)
 		top = top->next_node;
 	return (top);
 }
+
 void	append_node(t_stack_node **stack, int nbr)
 {
 	t_stack_node	*node;

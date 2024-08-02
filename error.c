@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 10:14:18 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/30 13:00:18 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 09:44:46 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	error_syntax(char *str_nbr)
 	}
 	return (0);
 }
+
 void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
 {
 	free_stack(a);

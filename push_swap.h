@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:27:18 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/31 12:30:12 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 10:11:26 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,46 @@ typedef struct s_stack_node
 {
 	int					value;
 	struct s_stack_node	*target_node;
-	struct s_stack_node *next_node;
+	struct s_stack_node	*next_node;
 	struct s_stack_node	*prev_node;
 
 }				t_stack_node;
 
 // split.c
-char	**ft_split(char *str, char separator);
+char				**ft_split(char *str, char separator);
 
 // stack_init.c
-void	stack_init(t_stack_node **a, char **argv, bool check);
+void				stack_init(t_stack_node **a, char **argv, bool check);
 
 // Error.c
-int		error_repetition(t_stack_node *a, int nbr);
-void	error_free(t_stack_node **a, char **argv, bool flag_argc_2);
-int		error_syntax(char *str_nbr);
-void	free_stack(t_stack_node **stack);
-void	free_matrix(char **argv);
+int					error_repetition(t_stack_node *a, int nbr);
+void				error_free(t_stack_node **a, char **argv, bool flag_argc_2);
+int					error_syntax(char *str_nbr);
+void				free_stack(t_stack_node **stack);
+void				free_matrix(char **argv);
 
 // utils.c
-t_stack_node	*find_last_node(t_stack_node *top);
-void	append_node(t_stack_node **stack, int nbr);
-int	stack_len(t_stack_node *stack);
+void				append_node(t_stack_node **stack, int nbr);
+int					stack_len(t_stack_node *stack);
+t_stack_node		*find_last_node(t_stack_node *top);
+
+// push_com.c
+void				pa(t_stack_node **a, t_stack_node **b, bool checker);
+void				pb(t_stack_node **b, t_stack_node **a, bool checker);
+
+//swap_com.c
+void				sa(t_stack_node **a, bool checker);
+void				sb(t_stack_node **b, bool checker);
+void				ss(t_stack_node **a, t_stack_node **b, bool checker);
+
+//rotate_com.c
+void				ra(t_stack_node **a, bool checker);
+void				rb(t_stack_node **b, bool checker);
+void				rr(t_stack_node **a, t_stack_node **b, bool checker);
+
+//reverse_rotate_com.c
+void				rra(t_stack_node **a, bool checker);
+void				rrb(t_stack_node **b, bool checker);
+void				rrr(t_stack_node **a, t_stack_node **b, bool checker);
 
 #endif

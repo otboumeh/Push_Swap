@@ -6,15 +6,15 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 13:01:54 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/07/31 15:54:09 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 09:52:02 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_stack_node **dest, t_stack_node **src)
+static	void	push(t_stack_node **dest, t_stack_node **src)
 {
-	t_stack_node *node_to_push;	
+	t_stack_node	*node_to_push;	
 
 	if (*src == NULL)
 		return ;
@@ -34,4 +34,18 @@ static void	push(t_stack_node **dest, t_stack_node **src)
 		node_to_push->next_node->prev_node = node_to_push;
 		*dest = node_to_push;
 	}
+}
+
+void	pa(t_stack_node **a, t_stack_node **b, bool checker)
+{
+	push(b, a);
+	if (!checker)
+		write(1, "pa\n", 3);
+}
+
+void	pb(t_stack_node **b, t_stack_node **a, bool checker)
+{
+	push(a, b);
+	if (!checker)
+		write(1, "pb\n", 3);
 }
