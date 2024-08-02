@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:27:18 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/08/02 10:11:26 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/02 13:12:46 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void				free_matrix(char **argv);
 void				append_node(t_stack_node **stack, int nbr);
 int					stack_len(t_stack_node *stack);
 t_stack_node		*find_last_node(t_stack_node *top);
+bool				sorted_stack(t_stack_node *stack);
 
 // push_com.c
 void				pa(t_stack_node **a, t_stack_node **b, bool checker);
@@ -63,4 +64,6 @@ void				rra(t_stack_node **a, bool checker);
 void				rrb(t_stack_node **b, bool checker);
 void				rrr(t_stack_node **a, t_stack_node **b, bool checker);
 
+//tiny_sort.c
+void				tiny_sort(t_stack_node **a);
 #endif
