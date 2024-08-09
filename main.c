@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:27:02 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/08/02 11:08:21 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/09 12:08:17 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 		if (stack_len(a) == 2)
 			sa(&a, false);
 		else if (stack_len(a) == 3)
-			tinny_sort(&a);
+			tiny_sort(&a);
 		else
 			push_swap(&a, &b);
 	}

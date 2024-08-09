@@ -6,7 +6,7 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:27:18 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/08/02 13:12:46 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/08/09 13:17:25 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 typedef struct s_stack_node
 {
 	int					value;
+	int					current_position;
+	int					push_price;
+	bool				above_median;
+	bool				cheapest;
 	struct s_stack_node	*target_node;
 	struct s_stack_node	*next_node;
 	struct s_stack_node	*prev_node;
@@ -66,4 +70,15 @@ void				rrr(t_stack_node **a, t_stack_node **b, bool checker);
 
 //tiny_sort.c
 void				tiny_sort(t_stack_node **a);
+
+//push_swap_i.c
+void				set_current_position(t_stack_node *stack);
+void				set_price(t_stack_node *a, t_stack_node *b);
+void				set_cheapest(t_stack_node *b);
+void				init_nodes(t_stack_node *a, t_stack_node *b);
+
+//push_swap.c
+void	finish_rotation(t_stack_node **stack, t_stack_node *top_node, char stack_name);
+void	push_swap(t_stack_node **a, t_stack_node **b);
+
 #endif
