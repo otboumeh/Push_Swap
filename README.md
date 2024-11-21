@@ -56,7 +56,7 @@ The **bonus part** extends the functionality by implementing additional features
 
 1. Compile the program:
    ```bash
-   gcc -Wall -Wextra -Werror push_swap.c
+   make
 2. Run the push_swap program to sort your stack:
      ```bash
       ./push_swap 3 2 1
